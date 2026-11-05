@@ -34,7 +34,7 @@ class HomeScreen extends StatelessWidget {
           padding: EdgeInsets.all(16),
           child: Column(
             children: [
-              _BuildImage('https://picsum.photos/id/10/200/300'),
+              Image.network('https://picsum.photos/id/10/200/300', height: 500.0, width: 500.0, fit: BoxFit.cover,),
               SizedBox(height: 16,),
               Text('A Peaceful Natural Escape', style: TextStyle(color: Colors.green),),
               SizedBox(height: 16,),
@@ -45,9 +45,9 @@ class HomeScreen extends StatelessWidget {
                 child: Row(
                   children: [
                     _BuildGalleryImage('https://picsum.photos/id/10/300/200'),
-                    SizedBox(height: 16,),
+                    SizedBox(width: 16,),
                     _BuildGalleryImage('https://picsum.photos/id/29/300/200'),
-                    SizedBox(height: 16,),
+                    SizedBox(width: 16,),
                     _BuildGalleryImage('https://picsum.photos/id/37/300/200'),
                   ],
                 ),
@@ -60,24 +60,13 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-Widget _BuildImage(String url){
-  return ClipRRect(
-    child: Image.network(
-      url,
-      height: 250,
-      width: 250,
-      fit: BoxFit.cover,
-    ),
-  );
-}
-
 Widget _BuildGalleryImage(String url){
   return ClipRRect(
     borderRadius: BorderRadius.circular(20),
     child: Image.network(
       url,
-      height: 300,
-      width: 150,
+      height: 300.0,
+      width: 150.0,
       fit: BoxFit.cover,
     ),
   );
