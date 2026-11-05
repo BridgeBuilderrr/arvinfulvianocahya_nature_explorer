@@ -34,7 +34,7 @@ class HomeScreen extends StatelessWidget {
           padding: EdgeInsets.all(16),
           child: Column(
             children: [
-              Image.network('https://picsum.photos/id/10/200/300', height: 400.0, width: 500.0, fit: BoxFit.cover,),
+              Image.network('https://picsum.photos/id/10/200/300', height: 400.0, width: double.infinity, fit: BoxFit.cover,),
               SizedBox(height: 16,),
               Text('A Peaceful Natural Escape', style: TextStyle(color: Colors.green),),
               SizedBox(height: 16,),
